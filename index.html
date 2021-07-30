@@ -1,0 +1,53 @@
+<html>
+<body>
+<div class="container">
+  <h1>Flask Web Form</h1>
+  <form action="{{ url_for('predict')}}" method="post">
+    <label for="name">Name:</label>
+    <input type="text" class="form-control" id="name" name="name" placeholder="What's your name?">
+
+    <label for="description">Description:</label>
+    <input type="text" class="form-control" id="Description" name="Description" placeholder="Description of the product.">
+
+    <label for="Category">Category:</label>
+    <input type="text" class="form-control" id="Category" name="Category" placeholder="choose a category.">
+
+    <label for="Sub-Category1">Sub-Category1:</label>
+    <input type="text" class="form-control" id="Sub-Category1" name="Sub-Category1" placeholder="choose a sub-category1.">
+
+    <label for="Sub-Category2">Sub-Category2:</label>
+    <input type="text" class="form-control" id="Sub-Category2" name="Sub-Category2" placeholder="Sub-Category2">
+
+    <label for="Brand">Brand:</label>
+    <input type="text" class="form-control" id="Brand" name="Brand" placeholder="choose a brand name.">
+
+    <label for="Is-Branded">Is-Branded:</label>
+    <select id="Is-Branded" name="Is-Branded">
+      <option value="0">0</option>
+      <option value="1">1</option>
+    </select>
+
+    <label for="Shipping">Shipping:</label>
+    <select id="Shipping" name="Shipping">
+      <option value="0">0</option>
+      <option value="1">1</option>
+    </select>
+
+    <label for="Item Condition">Item Condition:</label>
+    <select id="Item Condition" name="Item Condition">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+
+    <button type="submit" class="btn">Predict</button>
+  </form>
+  <br>
+  <br>
+  {{ prediction_text }}
+
+</div>
+</body>
+</html>
